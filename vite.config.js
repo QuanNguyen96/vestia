@@ -7,7 +7,7 @@ import tailwindcss from "@tailwindcss/vite"
 import path from "path"
 
 export default defineConfig({
-  base:'/vestia/',
+  base:'/vestia',
   plugins: [
     react(),
     jsconfigPaths(),
