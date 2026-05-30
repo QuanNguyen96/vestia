@@ -22,6 +22,9 @@ const router = createBrowserRouter([
     children: [ghostRoutes, publicRoutes, customRoutes],
 
   },
+   {
+    basename: "/vestia",
+  }
 ]);
 
 export default router;
