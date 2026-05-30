@@ -7,9 +7,13 @@ import "i18n/config";
 import "styles/index.css";
 
 import "simplebar-react/dist/simplebar.min.css";
+import { HashRouter } from "react-router-dom";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
-  <React.StrictMode>
+  // <React.StrictMode>
+  <HashRouter>
     <App />
-  </React.StrictMode>,
+  </HashRouter>
+
+  // </React.StrictMode>,
 );
