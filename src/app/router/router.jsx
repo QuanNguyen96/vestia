@@ -12,16 +12,20 @@ import { publicRoutes } from "./public";
 
 // ----------------------------------------------------------------------
 
-const router = createBrowserRouter([
+const basename = import.meta.env?.BASE_URL.replace(/\/$/, "") || ''
+const router = createBrowserRouter(
+  [
+    {
+      id: "root",
+      Component: Root,
+      hydrateFallbackElement: <SplashScreen />,
+      ErrorBoundary: RootErrorBoundary,
+      children: [ghostRoutes, publicRoutes, customRoutes],
+    },
+  ],
   {
-    id: "root",
-    Component: Root,
-    hydrateFallbackElement: <SplashScreen />,
-    ErrorBoundary: RootErrorBoundary,
-    // children: [protectedRoutes, ghostRoutes, publicRoutes, customRoutes],
-    children: [ghostRoutes, publicRoutes, customRoutes],
-
-  },
-]);
+    basename: basename,
+  }
+);
 
 export default router;

@@ -68,12 +68,10 @@ export default function Header() {
         {/* NAV */}
         <nav className="hidden md:flex gap-8 text-sm font-medium">
 
-          {/* <button onClick={() => handleNav("about")} className="hover:text-blue-600">
+
+          <button onClick={() => navigate("/about")} className="hover:text-blue-600">
             About
-          </button> */}
-          <a href="/about" className="hover:text-blue-600">
-            About
-          </a>
+          </button>
 
           <button onClick={() => handleNav("services")} className="hover:text-blue-600">
             Services
